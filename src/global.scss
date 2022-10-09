@@ -34,3 +34,11 @@ ion-content {
   --background: #252525 !important;
   background: #252525 !important;
 }
+
+.iconbtn {
+  ion-button {
+    min-height: 50px !important;
+    --border-radius: 15px !important;
+    margin-left: 12px;
+  }
+}
