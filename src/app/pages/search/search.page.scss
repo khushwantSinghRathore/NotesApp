@@ -1,0 +1,13 @@
+.searchbar {
+  height: 70px;
+
+  ion-item {
+    width: 90%;
+    margin: auto;
+    border-radius: 30px;
+
+    ion-input {
+      min-height: 50px;
+    }
+  }
+}

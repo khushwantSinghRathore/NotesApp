@@ -12,4 +12,8 @@ export class HomePage {
   openEditor() {
     this.route.navigate(['editor']);
   }
+
+  openSearch() {
+    this.route.navigate(['search']);
+  }
 }

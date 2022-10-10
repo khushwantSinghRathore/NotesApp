@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -7,9 +8,16 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./editor.page.scss'],
 })
 export class EditorPage implements OnInit {
-  constructor(private alertController: AlertController) {}
+  constructor(
+    private alertController: AlertController,
+    private route: Router
+  ) {}
 
   ngOnInit() {}
+
+  backHome() {
+    this.route.navigate(['home']);
+  }
 
   async presentAlert() {
     const alert = await this.alertController.create({

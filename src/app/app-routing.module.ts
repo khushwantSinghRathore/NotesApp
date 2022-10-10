@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/search/search.module').then((m) => m.SearchPageModule),
   },
+  {
+    path: 'viewnote',
+    loadChildren: () => import('./pages/viewnote/viewnote.module').then( m => m.ViewnotePageModule)
+  },
 ];
 
 @NgModule({
