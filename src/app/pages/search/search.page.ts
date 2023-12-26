@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnInit {
+  text: string = '';
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  delete() {
+    console.log(this.text);
+    if (this.text == '') {
+      this.router.navigateByUrl('home');
+    } else {
+      this.text = '';
+    }
   }
-
 }
